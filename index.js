@@ -9,16 +9,17 @@ const {Connection}=require("@solana/web3.js")
 const { pumpfunSwapTransactionFasterWallet, swapTokenFastestWallet } = require("./swap")
 const { getSwapMarketFastest, getSwapMarketFaster } = require("./utils")
 
+//Initialze web3 connection instance with RPC node.
 const connection=new Connection(process.env.RPC_API);
 
+//Initialze wallet instance
 const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
 const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
+//Initialze API server
 const app=express();
 app.use(cors())
-
 app.use(bodyParser.json());
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/",(req,res)=>{
@@ -27,6 +28,7 @@ app.get("/",(req,res)=>{
     })
 })
 
+//Buy with 0.1 SOL on pumpfun
 app.get("/pumpfun/:id/buy",async (req,res)=>{
     const targetToken=req.params.id;
     const result=await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,0.1,true);
@@ -35,6 +37,7 @@ app.get("/pumpfun/:id/buy",async (req,res)=>{
     return res.json({status:"success"});
 })
 
+//Sell all on pumpfun
 app.get("/pumpfun/:id/sell",async (req,res)=>{
     const targetToken=req.params.id;
     const result=await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,0.1,false);
@@ -43,6 +46,7 @@ app.get("/pumpfun/:id/sell",async (req,res)=>{
     return res.json({status:"success"});
 })
 
+//POST API for both buy and sell on Pumpfun
 app.post("/pumpfun",async (req,res)=>{
     const targetToken=req.body.token;
     const buy=Boolean(req.body.buy);
@@ -54,6 +58,7 @@ app.post("/pumpfun",async (req,res)=>{
 
 })
 
+//Buy with 0.1 SOL on Raydium
 app.get("/raydium/:id/buy",async (req,res)=>{
     const targetToken=req.params.id;
     const swapMarket=await getSwapMarketFaster(connection,targetToken);
@@ -63,6 +68,7 @@ app.get("/raydium/:id/buy",async (req,res)=>{
     return res.json({status:"success"});
 })
 
+//Sell all on Raydium
 app.get("/raydium/:id/sell",async (req,res)=>{
     const targetToken=req.params.id;
     const swapMarket=await getSwapMarketFaster(connection,targetToken);
@@ -72,6 +78,7 @@ app.get("/raydium/:id/sell",async (req,res)=>{
     return res.json({status:"success"});
 })
 
+//POST API for both buy and sell on Raydium
 app.post("/raydium/",async (req,res)=>{
     const targetToken=req.body.token;
     const buy=Boolean(req.body.buy);
@@ -84,6 +91,8 @@ app.post("/raydium/",async (req,res)=>{
 
 })
 
+
+//Create webserver and start service
 const server=http.createServer(app);
 server.listen(process.env.PORT,()=>{
     console.log(`API is started on PORT:${process.env.PORT}`)
