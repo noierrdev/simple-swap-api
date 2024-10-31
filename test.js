@@ -1,6 +1,5 @@
 const { Keypair, Connection } = require("@solana/web3.js");
 const { pumpfunSwapTransactionFasterWalletStaked, swapPumpfunFasterWalletStaked } = require("./swap");
-
 require("dotenv").config();
 const connection=new Connection(process.env.RPC_API)
 const stakedConnection=new Connection(process.env.RPC_API)

@@ -6,12 +6,16 @@ const cors=require("cors")
 const bodyParser=require("body-parser")
 
 const {Connection}=require("@solana/web3.js")
-const { pumpfunSwapTransactionFasterWallet, swapTokenFastestWallet } = require("./swap")
-const { getSwapMarketFastest, getSwapMarketFaster } = require("./utils")
+const { pumpfunSwapTransactionFasterWallet, swapTokenFastestWallet, pumpfunSwapTransactionFasterWalletStaked, swapTokenFastestWalletStaked } = require("./swap")
+const { getSwapMarketFastest, getSwapMarketFaster } = require("./utils");
+
+
 
 //Initialze web3 connection instance with RPC node.
 const connection=new Connection(process.env.RPC_API);
 const stakedConnection=new Connection(process.env.STAKED_RPC)
+
+const STAKED=Boolean(eval(process.env.STAKED))
 
 //Initialze wallet instance
 const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
@@ -32,7 +36,7 @@ app.get("/",(req,res)=>{
 //Buy with 0.1 SOL on pumpfun
 app.get("/pumpfun/:id/buy",async (req,res)=>{
     const targetToken=req.params.id;
-    const result=await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,0.1,true);
+    const result=(STAKED==false)?await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,0.1,true):await pumpfunSwapTransactionFasterWalletStaked(connection,stakedConnection,wallet,targetToken,0.1,true);
     if(result!=true)
         return res.json({status:"error"});
     return res.json({status:"success"});
@@ -41,7 +45,7 @@ app.get("/pumpfun/:id/buy",async (req,res)=>{
 //Sell all on pumpfun
 app.get("/pumpfun/:id/sell",async (req,res)=>{
     const targetToken=req.params.id;
-    const result=await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,0.1,false);
+    const result=(STAKED==false)?await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,0.1,false):await pumpfunSwapTransactionFasterWalletStaked(connection,stakedConnection,wallet,targetToken,0.1,false);
     if(result!=true)
         return res.json({status:"error"});
     return res.json({status:"success"});
@@ -52,7 +56,7 @@ app.post("/pumpfun",async (req,res)=>{
     const targetToken=req.body.token;
     const buy=Boolean(req.body.buy);
     const amount=Number(req.body.amount);
-    const result=await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,amount,buy);
+    const result=(STAKED==false)?await pumpfunSwapTransactionFasterWallet(connection,wallet,targetToken,amount,buy):await pumpfunSwapTransactionFasterWallet(connection,stakedConnection,wallet,targetToken,amount,buy);
     if(result!=true)
         return res.json({status:"error"});
     return res.json({status:"success"});
@@ -63,7 +67,7 @@ app.post("/pumpfun",async (req,res)=>{
 app.get("/raydium/:id/buy",async (req,res)=>{
     const targetToken=req.params.id;
     const swapMarket=await getSwapMarketFaster(connection,targetToken);
-    const result=await swapTokenFastestWallet(connection,wallet,targetToken,swapMarket.poolKeys,0.1,false);
+    const result=(STAKED==false)?await swapTokenFastestWallet(connection,wallet,targetToken,swapMarket.poolKeys,0.1,false):await swapTokenFastestWalletStaked(connection,stakedConnection,wallet,targetToken,swapMarket.poolKeys,0.1,false);
     if(result!=true)
         return res.json({status:"error"});
     return res.json({status:"success"});
@@ -73,7 +77,7 @@ app.get("/raydium/:id/buy",async (req,res)=>{
 app.get("/raydium/:id/sell",async (req,res)=>{
     const targetToken=req.params.id;
     const swapMarket=await getSwapMarketFaster(connection,targetToken);
-    const result=await swapTokenFastestWallet(connection,wallet,targetToken,swapMarket.poolKeys,0.1,true);
+    const result=(STAKED==false)?await swapTokenFastestWallet(connection,wallet,targetToken,swapMarket.poolKeys,0.1,true):await swapTokenFastestWalletStaked(connection, stakedConnection,wallet,targetToken,swapMarket.poolKeys,0.1,true);
     if(result!=true)
         return res.json({status:"error"});
     return res.json({status:"success"});
@@ -85,7 +89,7 @@ app.post("/raydium/",async (req,res)=>{
     const buy=Boolean(req.body.buy);
     const amount=Number(req.body.amount);
     const swapMarket=await getSwapMarketFaster(connection,targetToken);
-    const result=await swapTokenFastestWallet(connection,wallet,targetToken,swapMarket.poolKeys,amount,(!buy));
+    const result=(STAKED==false)?await swapTokenFastestWallet(connection,wallet,targetToken,swapMarket.poolKeys,amount,(!buy)):await swapTokenFastestWalletStaked(connection, stakedConnection,wallet,targetToken,swapMarket.poolKeys,amount,(!buy));
     if(result!=true)
         return res.json({status:"error"});
     return res.json({status:"success"});
