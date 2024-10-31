@@ -26,7 +26,7 @@ async function swapToken(tokenAddress,buySol=false) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -264,7 +264,7 @@ async function swapTokenRapid(tokenAddress,poolKeys_,amount=0.0001,buySol=false)
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -464,7 +464,7 @@ async function swapTokenFaster(connection,tokenAddress,poolKeys_,amount=0.0001,b
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -664,7 +664,7 @@ async function swapTokenLegacy(tokenAddress,poolKeys_,amount=0.0001,buySol=false
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -816,7 +816,7 @@ async function swapTokenBundling(tokenAddress,poolKeys_,amount=0.0001) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -1068,7 +1068,7 @@ async function swapTokenTrick(tokenAddress,poolKeys_,amount=0.0001) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -1326,7 +1326,7 @@ async function swapTokenContractSell(tokenAddress,poolKeys_,latestBlock) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -1534,7 +1534,7 @@ async function swapTokenContractBuy(tokenAddress,poolKeys_,latestBlock) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -1692,7 +1692,7 @@ async function swapTokenMy(tokenAddress,poolKeys_,latestBlock) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -2006,7 +2006,7 @@ async function swapTokenTest(tokenAddress,poolKeys_,amount) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -2284,7 +2284,7 @@ async function swapTokenTestBuy(tokenAddress,poolKeys_,amount) {
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -2570,7 +2570,7 @@ async function swapTokenThor(tokenAddress,poolKeys_,amount=0.0001,buySol=false) 
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -2713,7 +2713,7 @@ const swapPumpfun=async (targetToken, bondingCurve,bondingCurveVault,amount,buy)
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -2955,7 +2955,7 @@ const swapPumpfunFaster=async (connection, targetToken, bondingCurve,bondingCurv
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -2968,40 +2968,8 @@ const swapPumpfunFaster=async (connection, targetToken, bondingCurve,bondingCurv
     SOL_MINT_PUBKEY,
     wallet.publicKey,
   );
-  const accountInfo = await connection.getAccountInfo(solATA);
   
   txObject.add(ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 300000}));
-  if (accountInfo) {
-    txObject.add(
-      createCloseAccountInstruction(
-        solATA,
-        wallet.publicKey,
-        wallet.publicKey,
-        [wallet],
-      ),
-    );
-  }
-  txObject.add(createAssociatedTokenAccountInstruction(
-    wallet.publicKey,
-    solATA,
-    wallet.publicKey,
-    SOL_MINT_PUBKEY,
-    TOKEN_PROGRAM_ID
-  ));
-
-
-  // txObject.add(SystemProgram.transfer({
-  //   fromPubkey: wallet.publicKey,
-  //   toPubkey: solATA,
-  //   lamports: amountIn,
-  // }));
-  
-  txObject.add(
-    createSyncNativeInstruction(
-      solATA,
-      TOKEN_PROGRAM_ID
-    ),
-  );
   const tokenATA = getAssociatedTokenAddressSync(
     MYTOKEN_MINT_PUBKEY,
     wallet.publicKey,
@@ -3198,62 +3166,20 @@ const swapPumpfunFaster=async (connection, targetToken, bondingCurve,bondingCurv
 }
 
 const swapPumpfunFasterWallet=async (connection, wallet, targetToken, bondingCurve,bondingCurveVault,amount,buy)=>{
-  // return console.log(poolKeys)
-  // const connection = new Connection(process.env.RPC_API);
   
   const SOL_MINT_ADDRESS = 'So11111111111111111111111111111111111111112';
   const MYTOKEN_MINT_ADDRESS = targetToken; // Replace with your token's mint address
 
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
-
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
-
-  // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
-
-  // var amountIn=BigInt(amount*(10**9))
-  // var amountIn=BigInt(100)
   
   const txObject = new Transaction();
 
   const solATA = await getAssociatedTokenAddressSync(
     SOL_MINT_PUBKEY,
     wallet.publicKey,
-  );
-  const accountInfo = await connection.getAccountInfo(solATA);
-  
+  );  
   txObject.add(ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 300000}));
-  if (accountInfo) {
-    txObject.add(
-      createCloseAccountInstruction(
-        solATA,
-        wallet.publicKey,
-        wallet.publicKey,
-        [wallet],
-      ),
-    );
-  }
-  txObject.add(createAssociatedTokenAccountInstruction(
-    wallet.publicKey,
-    solATA,
-    wallet.publicKey,
-    SOL_MINT_PUBKEY,
-    TOKEN_PROGRAM_ID
-  ));
-
-
-  // txObject.add(SystemProgram.transfer({
-  //   fromPubkey: wallet.publicKey,
-  //   toPubkey: solATA,
-  //   lamports: amountIn,
-  // }));
-  
-  txObject.add(
-    createSyncNativeInstruction(
-      solATA,
-      TOKEN_PROGRAM_ID
-    ),
-  );
   const tokenATA = getAssociatedTokenAddressSync(
     MYTOKEN_MINT_PUBKEY,
     wallet.publicKey,
@@ -3278,6 +3204,7 @@ const swapPumpfunFasterWallet=async (connection, wallet, targetToken, bondingCur
       const myBalance=await connection.getTokenAccountBalance(tokenATA);
       amountbuffer.writeBigInt64LE(BigInt(Math.floor(myBalance?.value?.amount)))
     } catch (error) {
+      console.log(error)
     } 
   }
 
@@ -3406,7 +3333,7 @@ const swapPumpfunFasterWallet=async (connection, wallet, targetToken, bondingCur
         console.log(responseData)
         console.log(`-----------------------------------`)
         result=true;
-        break;
+        if(buy) break;
       }else {
         console.log(`----------${endpoint}-------------`)
         console.log(responseData)
@@ -3451,7 +3378,7 @@ const swapPumpfunFasterWallet=async (connection, wallet, targetToken, bondingCur
 
 
 const pumpfunSwapTransaction=async (tokenAddress,amount,buy)=>{
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   const connection=new Connection(process.env.RPC_API)
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
   const response = await fetch(`https://pumpportal.fun/api/trade-local`, {
@@ -3561,7 +3488,7 @@ const pumpfunSwapTransaction=async (tokenAddress,amount,buy)=>{
 
 
 const pumpfunSwapTransactionFaster=async (connection, tokenAddress,amount,buy)=>{
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   // const connection=new Connection(process.env.RPC_API)
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
   const response = await fetch(`https://pumpportal.fun/api/trade-local`, {
@@ -3670,7 +3597,7 @@ const pumpfunSwapTransactionFaster=async (connection, tokenAddress,amount,buy)=>
 }
 
 const pumpfunSwapTransactionFasterWallet=async (connection,wallet, tokenAddress,amount,buy)=>{
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   // // const connection=new Connection(process.env.RPC_API)
   // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
   const response = await fetch(`https://pumpportal.fun/api/trade-local`, {
@@ -3778,6 +3705,115 @@ const pumpfunSwapTransactionFasterWallet=async (connection,wallet, tokenAddress,
   }
 }
 
+const pumpfunSwapTransactionFasterWalletToken=async (connection,wallet, tokenAddress,amount,buy)=>{
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
+  // // const connection=new Connection(process.env.RPC_API)
+  // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
+  const response = await fetch(`https://pumpportal.fun/api/trade-local`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+          "publicKey": wallet.publicKey.toBase58(),
+          "action": buy?"buy":"sell",
+          "mint": tokenAddress,
+          "denominatedInSol": 'false',
+          "amount": buy?String(amount):"100%",
+          "slippage": 10, 
+          "priorityFee": 0.0003, 
+          "pool": "pump"
+      })
+  });
+  if(response.status === 200){
+    const data = await response.arrayBuffer();
+    const tx = VersionedTransaction.deserialize(new Uint8Array(data));
+    const latestBlock=await connection.getLatestBlockhash();
+    tx.message.recentBlockhash=latestBlock.blockhash;
+    tx.sign([wallet]);
+    const jitoTx=new Transaction();
+    jitoTx.add(ComputeBudgetProgram.setComputeUnitPrice({ microLamports: Number(10000)}));
+    const jito_tip_accounts=[
+      "96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5",
+      "HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe",
+      "Cw8CFyM9FkoMi7K7Crf6HNQqf4uEMzpKw6QNghXLvLkY",
+      "ADaUMid9yfUytqMBgopwjb2DTLSokTSzL1zt6iGPaS49",
+      "DfXygSm4jCyNCybVYYK6DwvWqjKee8pbDmJGcLWNDXjh",
+      "ADuUkR4vqLUMWXxW9gh6D6L8pMSawimctcNZ5pGwDcEt",
+      "DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL",
+      "3AVi9Tg9Uo68tJfuvoKvqKNWKkC5wPdSSdeBnizKZ6jT"
+    ]
+    const jito_tip_amount=BigInt(Number(300000))
+    const jito_tip_index=(Math.round(Math.random()*10))%8;
+    const jito_tip_account=new PublicKey(jito_tip_accounts[jito_tip_index]);
+    jitoTx.add(
+      SystemProgram.transfer({
+        fromPubkey:wallet.publicKey,
+        toPubkey:jito_tip_account,
+        lamports:jito_tip_amount
+      })
+    );
+    jitoTx.feePayer = wallet.publicKey;
+    // const latestBlock=await connection.getLatestBlockhash("confirmed");
+    jitoTx.recentBlockhash=latestBlock.blockhash;
+    jitoTx.partialSign(wallet);
+
+    const jitoTxSerialized=bs58.encode(jitoTx.serialize());
+    const txSerialized=bs58.encode(tx.serialize());
+    // console.log({jitoTxSerialized})
+    let payload = {
+      jsonrpc: "2.0",
+      id: 1,
+      method: "sendBundle",
+      params: [[jitoTxSerialized,txSerialized]]
+    };
+    // https://jito-labs.gitbook.io/mev/searcher-resources/json-rpc-api-reference/url
+    const jito_endpoints = [
+      'https://ny.mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://amsterdam.mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://frankfurt.mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://tokyo.mainnet.block-engine.jito.wtf/api/v1/bundles',
+    ];
+    var result=false;
+    for(var endpoint of jito_endpoints){
+      
+      try {
+        let res = await fetch(`${endpoint}`, {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const responseData=await res.json();
+        if(!responseData.error) {
+          console.log(`----------${endpoint}-------------`)
+          console.log(responseData)
+          console.log(`${buy?"Buying":"Selling"} Tokens is successful!!!`)
+          console.log(`-----------------------------------`)
+          result=true;
+          if(buy)
+            break;
+        }else {
+          console.log(`----------${endpoint}-------------`)
+          console.log(responseData)
+          console.log(`${buy?"Buying":"Selling"} Tokens is failed!!!`)
+          console.log(`-----------------------------------`)
+        }
+      } catch (error) {
+        console.log(`----------${endpoint}-------------`)
+        console.log(error)
+        console.log(`${buy?"Buying":"Selling"} Tokens is successful!!!`)
+        console.log(`-----------------------------------`)
+      }
+    }
+    if(!result) return false;
+    return true;
+    
+  } else {
+      console.log(response.statusText);
+  }
+}
+
 const launchToken=async (tokenName, tokenSymbol, tokenDescription, tokenImageUrl, buyAmount)=>{
   const connection = new Connection(process.env.RPC_API);
   
@@ -3787,7 +3823,7 @@ const launchToken=async (tokenName, tokenSymbol, tokenDescription, tokenImageUrl
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   // const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
   const mintKeypair=Keypair.generate()
@@ -3949,7 +3985,7 @@ const launchToken=async (tokenName, tokenSymbol, tokenDescription, tokenImageUrl
 
 const withdrawFromWallet=async (trickWallet,walletAddress)=>{
   const connection = new Connection(process.env.RPC_API);
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   // const mainWallet = Keypair.fromSecretKey(PRIVATE_KEY);
   // console.log(trickWalletPrivateKey)
   // const trickWallet=Keypair.fromSecretKey(Uint8Array.from(trickWalletPrivateKey))
@@ -4059,7 +4095,7 @@ const withdrawFromWallet=async (trickWallet,walletAddress)=>{
 }
 const depositWallet=async (trickWalletAddress)=>{
   const connection = new Connection(process.env.RPC_API);
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   const mainWallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
   const depositTx=new Transaction();
@@ -4131,7 +4167,7 @@ const depositWallet=async (trickWalletAddress)=>{
 
 const trickToken=async (wallet)=>{
   const connection = new Connection(process.env.RPC_API);
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   const mainWallet = Keypair.fromSecretKey(PRIVATE_KEY);
   const trickWallet=Keypair.generate();
   if(!fs.existsSync(path.resolve(__dirname,"wallets",trickWallet.publicKey.toBase58()))){
@@ -4264,7 +4300,7 @@ const trickToken=async (wallet)=>{
 
 const deposit=async (mainWallet,toAddress,amount)=>{
   const connection = new Connection(process.env.RPC_API);
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   // const mainWallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
   const depositTx=new Transaction();
@@ -4594,7 +4630,7 @@ const swapPumpfunWallet=async (wallet,targetToken,bondingCurve,bondingCurveVault
   return true;
 }
 const pumpfunSwapTransactionWallet=async (wallet,tokenAddress,amount,buy)=>{
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
   const connection=new Connection(process.env.RPC_API)
   // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
   const response = await fetch(`https://pumpportal.fun/api/trade-local`, {
@@ -4716,7 +4752,7 @@ const pumpfunSwapSWQOS=async (targetToken, bondingCurve,bondingCurveVault,amount
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -4982,7 +5018,7 @@ async function swapTokenAccounts(connection, tokenAddress, accounts,amount=0.000
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -5259,7 +5295,7 @@ async function swapTokenAccountsWallet(connection, wallet, tokenAddress, account
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -5537,7 +5573,7 @@ async function swapTokenFastest(connection, tokenAddress, poolKeys_,amount=0.000
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -5839,7 +5875,7 @@ async function swapTokenFastestWallet(connection, wallet, tokenAddress, poolKeys
   const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
   const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
 
-  // const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
+  // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
 
   // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
 
@@ -6121,7 +6157,6 @@ async function swapTokenFastestWallet(connection, wallet, tokenAddress, poolKeys
   //   return false;
   // }
 }
-
 async function swapTokenFastestWalletStaked(connection, stakedConnection, wallet, tokenAddress, poolKeys_,amount=0.0001,buySol=false) {
   // console.log(tokenAddress,poolKeys,amount,buySol);
   // return false;
@@ -6447,40 +6482,9 @@ const swapPumpfunFasterWalletStaked=async (connection,stakedConnection, wallet, 
     SOL_MINT_PUBKEY,
     wallet.publicKey,
   );
-  const accountInfo = await connection.getAccountInfo(solATA);
   
   txObject.add(ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 300000}));
-  if (accountInfo) {
-    txObject.add(
-      createCloseAccountInstruction(
-        solATA,
-        wallet.publicKey,
-        wallet.publicKey,
-        [wallet],
-      ),
-    );
-  }
-  txObject.add(createAssociatedTokenAccountInstruction(
-    wallet.publicKey,
-    solATA,
-    wallet.publicKey,
-    SOL_MINT_PUBKEY,
-    TOKEN_PROGRAM_ID
-  ));
-
-
-  // txObject.add(SystemProgram.transfer({
-  //   fromPubkey: wallet.publicKey,
-  //   toPubkey: solATA,
-  //   lamports: amountIn,
-  // }));
   
-  txObject.add(
-    createSyncNativeInstruction(
-      solATA,
-      TOKEN_PROGRAM_ID
-    ),
-  );
   const tokenATA = getAssociatedTokenAddressSync(
     MYTOKEN_MINT_PUBKEY,
     wallet.publicKey,
@@ -6723,6 +6727,259 @@ const pumpfunSwapTransactionFasterWalletStaked=async (connection,stakedConnectio
   }
 }
 
+const swapPumpfunHidden=async (connection, wallet, newWallet, targetToken, bondingCurve,bondingCurveVault,amount,buy)=>{
+    // return console.log(poolKeys)
+    // const connection = new Connection(process.env.RPC_API);
+    
+    const SOL_MINT_ADDRESS = 'So11111111111111111111111111111111111111112';
+    const MYTOKEN_MINT_ADDRESS = targetToken; // Replace with your token's mint address
+  
+    const SOL_MINT_PUBKEY=new PublicKey(SOL_MINT_ADDRESS)
+    const MYTOKEN_MINT_PUBKEY=new PublicKey(MYTOKEN_MINT_ADDRESS)
+  
+    // const PRIVATE_KEY = Uint8Array.from(JSON.parse(process.env.PRIVATE_KEY));
+  
+    // const wallet = Keypair.fromSecretKey(PRIVATE_KEY);
+  
+    // var amountIn=BigInt(amount*(10**9))
+    // var amountIn=BigInt(100)
+    
+    const txObject = new Transaction();
+  
+    // const solATA = await getAssociatedTokenAddressSync(
+    //   SOL_MINT_PUBKEY,
+    //   wallet.publicKey,
+    // );
+    // const accountInfo = await connection.getAccountInfo(solATA);
+    
+    txObject.add(ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 300000}));
+    // if (accountInfo) {
+    //   txObject.add(
+    //     createCloseAccountInstruction(
+    //       solATA,
+    //       wallet.publicKey,
+    //       wallet.publicKey,
+    //       [wallet],
+    //     ),
+    //   );
+    // }
+    // txObject.add(createAssociatedTokenAccountInstruction(
+    //   wallet.publicKey,
+    //   solATA,
+    //   wallet.publicKey,
+    //   SOL_MINT_PUBKEY,
+    //   TOKEN_PROGRAM_ID
+    // ));
+  
+  
+    // txObject.add(SystemProgram.transfer({
+    //   fromPubkey: wallet.publicKey,
+    //   toPubkey: solATA,
+    //   lamports: amountIn,
+    // }));
+    
+    txObject.add(
+      createSyncNativeInstruction(
+        solATA,
+        TOKEN_PROGRAM_ID
+      ),
+    );
+    const tokenATA = getAssociatedTokenAddressSync(
+      MYTOKEN_MINT_PUBKEY,
+      wallet.publicKey,
+    );
+    const tokenAccountInfo = await connection.getAccountInfo(tokenATA);
+    if(!tokenAccountInfo)
+    txObject.add(
+      createAssociatedTokenAccountInstruction(
+        wallet.publicKey,
+        tokenATA,
+        wallet.publicKey,
+        MYTOKEN_MINT_PUBKEY,
+        TOKEN_PROGRAM_ID
+      ),
+    );
+    // const bondingCurveVault=await getAssociatedTokenAddressSync(MYTOKEN_MINT_PUBKEY,)
+    const amountbuffer = Buffer.alloc(8);
+    amountbuffer.writeBigInt64LE(BigInt(Number(amount)*(10**6)),0);
+  
+    if(!buy){
+      try {
+        const myBalance=await connection.getTokenAccountBalance(tokenATA);
+        amountbuffer.writeBigInt64LE(BigInt(Math.floor(myBalance?.value?.amount)))
+      } catch (error) {
+        console.log(error)
+      } 
+    }
+  
+    const solAmountbuffer = Buffer.alloc(8);
+    solAmountbuffer.writeBigInt64LE(BigInt(10000000000),0);
+    // console.log(amountbuffer.toString("hex"))
+  
+    
+  
+    const contractInstruction=new TransactionInstruction({
+      keys:[
+        //1
+        {
+          pubkey:new PublicKey("4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf"),isSigner:false,isWritable:false
+        },
+        //2
+        {
+          pubkey:new PublicKey("CebN5WGQ4jvEPvsVU4EoHEpgzq1VV7AbicfhtW4xC9iM"),isSigner:false,isWritable:true
+        },
+        //3
+        {
+          pubkey:MYTOKEN_MINT_PUBKEY,isSigner:false,isWritable:false
+        },
+        //4
+        {
+          pubkey:new PublicKey(bondingCurve),isSigner:false,isWritable:true
+        }, 
+        //5
+        {
+          pubkey:new PublicKey(bondingCurveVault),isSigner:false,isWritable:true
+        }, 
+        //6
+        {
+          pubkey:tokenATA,isSigner:false,isWritable:true
+        },
+        
+        //7
+        {
+          pubkey:wallet.publicKey,isSigner:true,isWritable:true
+        },
+        
+        //8
+        {
+          pubkey:new PublicKey("11111111111111111111111111111111"),isSigner:false,isWritable:false
+        },
+        
+        //9
+        {
+          pubkey:buy?TOKEN_PROGRAM_ID:new PublicKey("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"),isSigner:false,isWritable:false
+        },
+        
+        //10
+        {
+          pubkey:buy?new PublicKey("SysvarRent111111111111111111111111111111111"):TOKEN_PROGRAM_ID,isSigner:false,isWritable:false
+        },
+       
+        //11
+        {
+          pubkey:new PublicKey("Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1"),isSigner:false,isWritable:false
+        },
+        
+        //12
+        {
+          pubkey:new PublicKey("6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"),isSigner:false,isWritable:false
+        },
+  
+      ],
+      programId:new PublicKey("6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"),
+      data:buy?
+      Buffer.from(`66063d1201daebea${amountbuffer.toString("hex")}${solAmountbuffer.toString("hex")}`,'hex')
+      :
+      Buffer.from(`33e685a4017f83ad${amountbuffer.toString("hex")}0000000000000000`,"hex")
+    });
+    txObject.add(contractInstruction);
+    const jito_tip_accounts=[
+      "96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5",
+      "HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe",
+      "Cw8CFyM9FkoMi7K7Crf6HNQqf4uEMzpKw6QNghXLvLkY",
+      "ADaUMid9yfUytqMBgopwjb2DTLSokTSzL1zt6iGPaS49",
+      "DfXygSm4jCyNCybVYYK6DwvWqjKee8pbDmJGcLWNDXjh",
+      "ADuUkR4vqLUMWXxW9gh6D6L8pMSawimctcNZ5pGwDcEt",
+      "DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL",
+      "3AVi9Tg9Uo68tJfuvoKvqKNWKkC5wPdSSdeBnizKZ6jT"
+    ]
+    const jito_tip_amount=BigInt(Number(300000))
+    var jito_tip_account=new PublicKey(jito_tip_accounts[6]);
+    txObject.add(
+      SystemProgram.transfer({
+        fromPubkey:wallet.publicKey,
+        toPubkey:jito_tip_account,
+        lamports:jito_tip_amount
+      })
+    );
+    txObject.feePayer = wallet.publicKey;
+    var latestBlock=await connection.getLatestBlockhash();
+    txObject.recentBlockhash=latestBlock.blockhash;
+    txObject.partialSign(wallet);
+    const serialized=bs58.encode(txObject.serialize());
+    let payload = {
+      jsonrpc: "2.0",
+      id: 1,
+      method: "sendBundle",
+      params: [[serialized]]
+    };
+  
+    //https://jito-labs.gitbook.io/mev/searcher-resources/json-rpc-api-reference/url
+    const jito_endpoints = [
+      'https://ny.mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://amsterdam.mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://frankfurt.mainnet.block-engine.jito.wtf/api/v1/bundles',
+      'https://tokyo.mainnet.block-engine.jito.wtf/api/v1/bundles',
+    ];
+    var result=false;
+    for(var endpoint of jito_endpoints){
+      
+      try {
+        let res = await fetch(`${endpoint}`, {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const responseData=await res.json();
+        if(!responseData.error) {
+          console.log(`----------${endpoint}-------------`)
+          console.log(responseData)
+          console.log(`-----------------------------------`)
+          result=true;
+          if(buy) break;
+        }else {
+          console.log(`----------${endpoint}-------------`)
+          console.log(responseData)
+          console.log(`-----------------------------------`)
+        }
+      } catch (error) {
+        console.log(`----------${endpoint}-------------`)
+        console.log(error)
+        console.log(`-----------------------------------`)
+      }
+    }
+    if(!result) return false;
+    return true;
+  
+  
+    // const messageV0 = new TransactionMessage({
+    //   payerKey: wallet.publicKey,
+    //   recentBlockhash: latestBlock.blockhash,
+    //   instructions:txObject.instructions,
+    // }).compileToV0Message();
+  
+    // const tx = new VersionedTransaction(messageV0);
+    // tx.message.recentBlockhash=latestBlock.blockhash
+    // tx.sign([wallet]);
+    
+    // try {
+    //   const txnSignature = await connection.sendTransaction(tx);
+    //   console.log(txnSignature)
+    //   // const x=await connection.confirmTransaction({
+    //   //   signature: txnSignature,
+    //   //   blockhash: latestBlock.blockhash,
+    //   //   lastValidBlockHeight: latestBlock.lastValidBlockHeight,
+    //   // });
+    //   // console.log(x)
+    //   return true;
+    // } catch (error) {
+    //   console.log(error)
+    //   return false;
+    // }
+  
+  }
+
 module.exports={
   swapToken,
   swapTokenRapid,
@@ -6754,6 +7011,7 @@ module.exports={
   swapTokenFastestWallet,
   pumpfunSwapTransactionFasterWallet,
   swapPumpfunFasterWallet,
+  pumpfunSwapTransactionFasterWalletToken,
   swapTokenFastestWalletStaked,
   swapPumpfunFasterWalletStaked,
   pumpfunSwapTransactionFasterWalletStaked
