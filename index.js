@@ -11,6 +11,7 @@ const { getSwapMarketFastest, getSwapMarketFaster } = require("./utils")
 
 //Initialze web3 connection instance with RPC node.
 const connection=new Connection(process.env.RPC_API);
+const stakedConnection=new Connection(process.env.STAKED_RPC)
 
 //Initialze wallet instance
 const PRIVATE_KEY = Uint8Array.from(bs58.decode(process.env.PRIVATE_KEY));
